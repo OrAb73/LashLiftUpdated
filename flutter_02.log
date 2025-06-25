@@ -1,0 +1,79 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter debug_adapter
+
+## exception
+
+FileSystemException: FileSystemException: writeFrom failed, path = '' (OS Error: The pipe is being closed.
+, errno = 232)
+
+```
+#0      _checkForErrorResponse (dart:io/common.dart:58:9)
+#1      _RandomAccessFile.writeFrom.<anonymous closure> (dart:io/file_impl.dart:1000:7)
+#2      _rootRunUnary (dart:async/zone.dart:1538:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1429:19)
+<asynchronous suspension>
+#4      _FileStreamConsumer.addStream.<anonymous closure>.<anonymous closure>.<anonymous closure> (dart:io/file_impl.dart:237:27)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.29.3, on Microsoft Windows [Version 10.0.26100.3775], locale he-IL) [1,235ms]
+    • Flutter version 3.29.3 on channel stable at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision ea121f8859 (12 days ago), 2025-04-11 19:10:07 +0000
+    • Engine revision cf56914b32
+    • Dart version 3.7.2
+    • DevTools version 2.42.3
+
+[✓] Windows Version (?? 11 Education 64-bit, 24H2, 2009) [9.8s]
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 35.0.0) [12.1s]
+    • Android SDK at C:\Users\Or\AppData\Local\Android\sdk
+    • Platform android-35, build-tools 35.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.3+-12282718-b509.11)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web [300ms]
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.8.5) [297ms]
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.8.34511.84
+    • Windows 10 SDK version 10.0.22621.0
+
+[✓] Android Studio (version 2024.2) [36ms]
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.3+-12282718-b509.11)
+
+[✓] VS Code (version 1.99.0) [28ms]
+    • VS Code at C:\Users\Or\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.108.0
+
+[✓] Connected device (4 available) [886ms]
+    • sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 15 (API 35) (emulator)
+    • Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.26100.3775]
+    • Chrome (web)                 • chrome        • web-javascript • Google Chrome 135.0.7049.96
+    • Edge (web)                   • edge          • web-javascript • Microsoft Edge 135.0.3179.85
+
+[!] Network resources [283ms]
+    ✗ A network error occurred while checking "https://pub.dev/": Failed host lookup: 'pub.dev'
+    ✗ A network error occurred while checking "https://storage.googleapis.com/": Failed host lookup: 'storage.googleapis.com'
+    ✗ A network error occurred while checking "https://maven.google.com/": Failed host lookup: 'maven.google.com'
+    ✗ A network error occurred while checking "https://cocoapods.org/": Failed host lookup: 'cocoapods.org'
+    ✗ A network error occurred while checking "https://github.com/": Failed host lookup: 'github.com'
+
+! Doctor found issues in 1 category.
+```
